@@ -1,0 +1,7 @@
+[project]
+name = "llm-eval-kit"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["pydantic>=2"]          # core stays tiny -> runs anywhere, incl. CI
+[project.optional-dependencies]
+judge = ["openai>=1.0"]                  # only if you use the LLM judge
