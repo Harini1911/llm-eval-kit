@@ -5,3 +5,6 @@ requires-python = ">=3.12"
 dependencies = ["pydantic>=2"]          # core stays tiny -> runs anywhere, incl. CI
 [project.optional-dependencies]
 judge = ["openai>=1.0"]                  # only if you use the LLM judge
+obs = ["langfuse"]
+[project.scripts]
+llm-eval = "llm_eval_kit.cli:main"
